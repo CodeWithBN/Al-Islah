@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AL-Islah Network</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+
+          // Optional: update links dynamically for this page
+          const links = document.querySelectorAll(
+            "#navbar-placeholder a.nav-link",
+          );
+          links.forEach((link) => {
+            if (link.textContent === "Home") link.href = "index.html"; // page-specific
+            if (link.textContent === "Contact") link.href = "contact.html"; // different page
+          });
+        });
+    </script>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-content">
+        <!-- Close Button -->
+        <span class="close-btn" id="closeDrawer">&times;</span>
+
+        <!-- Drawer Header -->
+        <div class="drawer-header">
+          <h2>AL-Islah Network</h2>
+          <p>Learn • Grow • Connect with Quran</p>
+        </div>
+
+        <!-- Divider -->
+        <div class="drawer-divider"></div>
+
+        <!-- Menu -->
+        <ul class="drawer-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero-section d-flex align-items-center">
+      <img src="../assets/images/hero.png" class="hero-bg" />
+      <div class="container text-center">
+        <h1 class="hero-title">Learn Quran with Tajweed</h1>
+
+        <p class="hero-subtitle">
+          Flexible Online Quran Classes for Kids & Adults — Start Your Spiritual
+          Journey Today
+        </p>
+
+        <a href="admission.html" class="btn btn-gold mt-3">Enroll Now</a>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="title-divider"></div>
+
+          <h2 class="section-title">About Us</h2>
+
+          <p class="text-muted">
+            Dedicated to providing authentic Quran education with qualified
+            teachers, flexible schedules, and a supportive learning environment
+            for students worldwide.
+          </p>
+
+          <div class="title-divider"></div>
+        </div>
+        <div class="row align-items-center gy-5">
+          <!-- Image Side -->
+          <div class="col-lg-6">
+            <div class="about-image-wrapper">
+              <img
+                src="../assets/images/about.jpg"
+                class="about-img"
+                alt="About Academy"
+              />
+              <div class="image-border"></div>
+            </div>
+          </div>
+
+          <!-- Content Side -->
+          <div class="col-lg-6">
+            <div class="about-card">
+              <h5 class="section-titles">About Our Academy</h5>
+
+              <p class="about-text">
+                We provide professional online Quran education with qualified
+                teachers, focusing on Tajweed, memorization, and understanding
+                of Islamic teachings for students of all ages worldwide.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  Certified Male & Female Teachers
+                </div>
+
+                <div class="feature-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  Flexible Class Timings
+                </div>
+
+                <div class="feature-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  One-to-One Personalized Learning
+                </div>
+              </div>
+
+              <a href="about.html" class="btn btn-gold mt-3"> Learn More </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="stat-box">
+            <h3>Flexible</h3>
+            <p>Timings</p>
+          </div>
+
+          <div class="stat-box">
+            <h3 class="counter" data-target="30">0</h3>
+            <p>Teachers</p>
+          </div>
+
+          <div class="stat-box">
+            <h3 class="counter" data-target="150">0</h3>
+            <p>Students</p>
+          </div>
+
+          <div class="stat-box">
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Courses</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COURSES ================= -->
+
+    <section class="section-padding bg-light" id="courses">
+      <div class="container text-center">
+        <h2 class="section-title mb-3">Our Courses</h2>
+        <p class="text-muted mb-5 section-subtitle">
+          Structured programs designed for students of all ages to learn Quran
+          with proper guidance and understanding.
+        </p>
+
+        <div class="row g-4">
+          <!-- Course 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="course-card h-100">
+              <div class="course-icon-wrapper">
+                <i class="bi bi-book"></i>
+              </div>
+              <h5>Basic Tajweed Course (BTC)</h5>
+              <p class="section-subtitle">
+                Learn the fundamental rules of Tajweed to recite the Quran
+                correctly with proper pronunciation and confidence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="course-card h-100">
+              <div class="course-icon-wrapper">
+                <i class="bi bi-journal-text"></i>
+              </div>
+              <h5>Quran Class (QC)</h5>
+              <p class="section-subtitle">
+                A comprehensive course for beginners focusing on Quran reading
+                from basics with guided practice sessions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="course-card h-100">
+              <div class="course-icon-wrapper">
+                <i class="bi bi-stars"></i>
+              </div>
+              <h5>1 Year Tajweed Course</h5>
+              <p class="section-subtitle">
+                Advanced Tajweed training program designed to master
+                pronunciation, fluency, and recitation excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="course-card h-100">
+              <div class="course-icon-wrapper">
+                <i class="bi bi-translate"></i>
+              </div>
+              <h5>Arabic Grammar Course (AGC)</h5>
+              <p class="section-subtitle">
+                Understand Arabic language structure to improve Quran
+                comprehension and strengthen linguistic skills.
+              </p>
+            </div>
+          </div>
+
+          <!-- Course 5 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="course-card h-100">
+              <div class="course-icon-wrapper">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <h5>Hadith Course (HC)</h5>
+              <p class="section-subtitle">
+                Study authentic Hadith with explanation to understand Islamic
+                teachings and daily life guidance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Course 6 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="course-card h-100">
+              <div class="course-icon-wrapper">
+                <i class="bi bi-award"></i>
+              </div>
+              <h5>Hifz Course</h5>
+              <p class="section-subtitle">
+                Memorization program with structured revision plans,
+                supervision, and progress monitoring for students.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#courses" class="btn btn-gold mt-5">View All Courses</a>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Why Choose Our Academy</h2>
+          <p class="section-subtitle">
+            We provide a structured, supportive, and flexible learning
+            environment to help students connect with the Quran confidently.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card h-100">
+              <div class="feature-icon-box">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h5>Flexible Online Classes</h5>
+              <p class="section-subtitle text-muted">
+                Learn from anywhere with schedules designed to fit your routine
+                and availability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card h-100">
+              <div class="feature-icon-box">
+                <i class="bi bi-person-check"></i>
+              </div>
+              <h5>Qualified Teachers</h5>
+              <p class="section-subtitle text-muted">
+                Experienced and trained instructors providing personalized
+                attention to every student.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card h-100">
+              <div class="feature-icon-box">
+                <i class="bi bi-book-half"></i>
+              </div>
+              <h5>Structured Curriculum</h5>
+              <p class="section-subtitle text-muted">
+                Step-by-step learning programs covering Tajweed, Quran reading,
+                and Islamic knowledge.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card h-100">
+              <div class="feature-icon-box">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <h5>Continuous Support</h5>
+              <p class="section-subtitle text-muted">
+                Regular feedback, assignments, and communication to ensure
+                consistent student progress.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-section" id="admission">
+      <div class="cta-bg"></div>
+      <div class="container text-center">
+        <h2 class="section-title">Begin Your Quran Learning Journey Today</h2>
+
+        <p class="section-subtitle">
+          Open admissions for all ages. Learn Quran with experienced teachers in
+          flexible online classes. Join our structured programs and start your
+          journey towards knowledge and understanding.
+        </p>
+
+        <div class="cta-buttons mt-4">
+          <a href="admission.html" class="btn btn-cta btn-gold btn-lg me-3"
+            >Apply for Admission</a
+          >
+          <a href="#courses" class="btn btn-cta btn-outline-light btn-lg"
+            >View Courses</a
+          >
+        </div>
+
+        <div class="cta-features mt-4">
+          <span>✔ Flexible Timings</span>
+          <span>✔ Experienced Teachers</span>
+          <span>✔ Personalized Attention</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <!-- Islamic Wave -->
+      <div class="footer-wave">
+        <svg viewBox="0 0 1440 120">
+          <path
+            fill="#056D4D"
+            fill-opacity="1"
+            d="M0,64L80,69.3C160,75,320,85,480,90.7C640,96,800,96,960,85.3C1120,75,1280,53,1360,42.7L1440,32V0H0Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="container footer-content">
+        <div class="row gy-4">
+          <!-- About -->
+          <div class="col-lg-4">
+            <div class="footer-card">
+              <h4 class="footer-logo">Al-Islah Quran Academy</h4>
+
+              <p>
+                Professional Online Quran Classes with Tajweed for kids and
+                adults worldwide. Learn with qualified teachers in a spiritual
+                and supportive environment.
+              </p>
+
+              <div class="footer-social">
+                <a
+                  href="https://www.facebook.com/share/17R927JmqF/"
+                  target="_blank"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+
+                <a
+                  href="https://chat.whatsapp.com/I09vief7xN8CAvzDCxCeBJ"
+                  target="_blank"
+                >
+                  <i class="bi bi-people-fill"></i>
+                </a>
+
+                <a
+                  href="https://whatsapp.com/channel/0029VakZY3B96H4ZG0wpGN0z"
+                  target="_blank"
+                >
+                  <i class="bi bi-broadcast"></i>
+                </a>
+
+                <a
+                  href="https://instagram.com/al.islah.network37"
+                  target="_blank"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="col-lg-4">
+            <div class="footer-card">
+              <h4 class="footer-logo">Quick Links</h4>
+
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="teachers.html">Teachers</a></li>
+                <li><a href="admission.html">Admission</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact + Newsletter -->
+          <div class="col-lg-4">
+            <div class="footer-card">
+              <h4 class="footer-logo">Contact Us</h4>
+
+              <p><i class="bi bi-whatsapp"></i> +92 340 6180331</p>
+              <p><i class="bi bi-instagram"></i> @al.islah.network37</p>
+
+              <a
+                href="https://wa.me/923406180331"
+                target="_blank"
+                class="btn btn-gold footer-btn"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <p class="text-center footer-bottom">
+          © 2026 Al-Islah Quran Academy | All Rights Reserved
+        </p>
+      </div>
+
+      <!-- Mosque Silhouette -->
+      <div class="mosque"></div>
+    </footer>
+
+    <!-- Back To Top -->
+    <button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+    <script>
+      const btn = document.getElementById("backToTop");
+
+      window.onscroll = function () {
+        if (document.documentElement.scrollTop > 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      btn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+
+      // counter
+      const counters = document.querySelectorAll(".counter");
+
+      counters.forEach((counter) => {
+        const updateCounter = () => {
+          const target = +counter.getAttribute("data-target");
+          const current = +counter.innerText;
+
+          const increment = target / 100; // speed control
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        updateCounter();
+      });
+
+      //drawer
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileDrawer = document.getElementById("mobileDrawer");
+      const closeDrawer = document.getElementById("closeDrawer");
+
+      menuToggle.addEventListener("click", () => {
+        mobileDrawer.classList.add("active");
+      });
+
+      closeDrawer.addEventListener("click", () => {
+        mobileDrawer.classList.remove("active");
+      });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
