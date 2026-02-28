@@ -167,8 +167,10 @@ h3 {
   justify-content: center;
   overflow: hidden;
 }
-@media (max-width: 576px) {
-  .hero-section {
+@media (max-width: 576px) 
+{
+  .hero-section
+  {
     max-height: 64vh;
   }
 }

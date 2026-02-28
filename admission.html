@@ -29,7 +29,7 @@
 
       .admission-hero {
         position: relative;
-        min-height: 88vh;
+        height: 88vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -41,6 +41,11 @@
         background: url("../assets/images/mosque.jpg") center/cover no-repeat;
       }
 
+      @media (max-width: 576px) {
+        .admission-hero {
+          max-height: 80vh;
+        }
+      }
       /* Dark luxury overlay */
       .admission-hero .hero-overlay {
         position: absolute;
@@ -100,12 +105,12 @@
 
       @media (max-width: 768px) {
         .admission-hero h1 {
-          font-size: 32px;
+          font-size: 30px !important;
         }
       }
       @media (max-width: 575px) {
         .admission-hero h1 {
-          font-size: 28px;
+          font-size: 26px !important;
         }
       }
 
@@ -140,13 +145,13 @@
         }
       }
 
-      .hero-buttons a 
-      {
+      .hero-buttons a {
         margin: 8px;
       }
 
       /* ================= BUTTON STYLING ================= */
 
+      /* ================= Primary Custom Button ================= */
       .btn-primary-custom {
         display: inline-block;
         padding: 14px 42px;
@@ -157,6 +162,22 @@
         text-decoration: none;
         transition: all 0.35s ease;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        white-space: nowrap; /* prevent wrapping */
+      }
+
+      .btn-primary-custom:hover {
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      }
+
+      @media (max-width: 767px) {
+        .btn-primary-custom,
+        .btn-outline-light {
+          padding: 10px 28px;
+          font-size: 14px; /* smaller text */
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
       }
 
       .btn-primary-custom:hover {
@@ -165,6 +186,7 @@
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
       }
 
+      /* ================= Outline Light Button ================= */
       .btn-outline-light {
         display: inline-block;
         padding: 14px 38px;
@@ -174,6 +196,15 @@
         text-decoration: none;
         font-weight: 500;
         transition: all 0.35s ease;
+        text-align: center;
+        white-space: nowrap; /* prevent text wrap */
+      }
+
+      @media (max-width: 767px) {
+        .btn-outline-light {
+          padding: 10px 28px; /* smaller padding */
+          font-size: 14px; /* smaller text */
+        }
       }
 
       .btn-outline-light:hover {
@@ -183,10 +214,11 @@
       }
 
       /* ================= INFO SECTION ================= */
-
+      /* ================= Admission Info Section ================= */
       .admission-info-section {
         padding: 110px 20px;
         background: linear-gradient(to bottom, #f9fafb, #eef2f3);
+        font-family: "Roboto", sans-serif;
       }
 
       /* Main Card */
@@ -200,10 +232,6 @@
         transition: 0.4s ease;
       }
 
-      .admission-card:hover {
-        transform: translateY(-6px);
-      }
-
       /* Left Side */
       .info-left {
         flex: 1;
@@ -211,14 +239,28 @@
         padding: 60px 50px;
         background: linear-gradient(135deg, #033d2b, #056d4d);
         color: #fff;
+        position: relative;
       }
 
+      /* Heading divider */
       .info-left h3 {
         font-size: 28px;
         margin-bottom: 30px;
         font-weight: 600;
+        position: relative;
       }
 
+      .info-left h3::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        margin-top: 12px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #ffd700, #33ffcc);
+      }
+
+      /* List with ticks */
       .info-left ul {
         list-style: none;
         padding: 0;
@@ -240,11 +282,11 @@
         font-weight: bold;
       }
 
-      /* Contact */
+      /* Contact Box */
       .contact-box {
         margin-top: 35px;
         font-size: 14px;
-        opacity: 0.9;
+        opacity: 0.95;
       }
 
       /* Right Side */
@@ -268,11 +310,12 @@
         color: #555;
       }
 
+      /* Button */
       .btn-gold-custom {
         display: inline-block;
         padding: 14px 40px;
         border-radius: 40px;
-        background: #ffd700;
+        background: linear-gradient(90deg, #ffd700, #e6c200);
         color: #033d2b;
         font-weight: 600;
         text-decoration: none;
@@ -281,10 +324,11 @@
       }
 
       .btn-gold-custom:hover {
-        background: #e6c200;
-        transform: translateY(-3px);
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
       }
 
+      /* Secure Text */
       .secure-text {
         display: block;
         margin-top: 18px;
@@ -294,18 +338,10 @@
       }
 
       /* ================= RESPONSIVE ================= */
-
       @media (max-width: 992px) {
-        .admission-hero h1 {
-          font-size: 36px;
-        }
-
-        .admission-hero {
-          padding: 120px 20px 90px;
-        }
-
         .admission-card {
           flex-direction: column;
+          align-items: center;
         }
 
         .info-left,
@@ -314,12 +350,84 @@
           text-align: center;
         }
 
+        /* Keep ticks visible */
         .info-left li {
-          padding-left: 0;
+          padding-left: 28px;
         }
 
         .info-left li::before {
+          display: inline-block;
+        }
+
+        /* Heading divider stays */
+        .info-left h3::after {
+          margin: 12px auto 0;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .info-left h3 {
+          font-size: 22px;
+        }
+
+        .info-left li,
+        .contact-box p,
+        .info-right h4,
+        .info-right p,
+        .secure-text {
+          font-size: 14px;
+        }
+
+        .btn-gold-custom {
+          padding: 10px 28px;
+          font-size: 13px;
+        }
+      }
+
+      /* ================= RESPONSIVE FIX ================= */
+      @media (max-width: 992px) {
+        .admission-card {
+          flex-direction: column;
+          align-items: stretch; /* keep full width */
+        }
+
+        .info-left,
+        .info-right {
+          padding: 45px 35px;
+          text-align: left; /* LEFT align for small screens */
+        }
+
+        /* Ticks still visible */
+        .info-left li {
+          padding-left: 28px;
+        }
+
+        .info-left li::before {
+          display: inline-block;
+        }
+
+        /* Remove divider line under heading */
+        .info-left h3::after {
           display: none;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .info-left h3 {
+          font-size: 22px;
+        }
+
+        .info-left li,
+        .contact-box p,
+        .info-right h4,
+        .info-right p,
+        .secure-text {
+          font-size: 14px;
+        }
+
+        .btn-gold-custom {
+          padding: 10px 28px;
+          font-size: 13px;
         }
       }
     </style>
@@ -389,7 +497,7 @@
       <div class="container hero-content">
         <span class="hero-badge">AL-Islah Network Admissions</span>
 
-        <h1>Begin Your Sacred Learning Journey</h1>
+        <h1 class="hero-head">Begin Your Sacred Learning Journey</h1>
 
         <p>
           Structured online Quran programs designed for children, adults, and
@@ -471,7 +579,7 @@
             <div class="footer-card">
               <h4 class="footer-logo">Al-Islah Quran Academy</h4>
 
-              <p>
+              <p class="footer-paragraph">
                 Professional Online Quran Classes with Tajweed for kids and
                 adults worldwide. Learn with qualified teachers in a spiritual
                 and supportive environment.
@@ -529,8 +637,13 @@
             <div class="footer-card">
               <h4 class="footer-logo">Contact Us</h4>
 
-              <p><i class="bi bi-whatsapp"></i> +92 340 6180331</p>
-              <p><i class="bi bi-instagram"></i> @al.islah.network37</p>
+              <p class="contact-text">
+                <i class="bi bi-whatsapp"></i> +92 340 6180331
+              </p>
+
+              <p class="contact-text">
+                <i class="bi bi-instagram"></i> @al.islah.network37
+              </p>
 
               <a
                 href="https://wa.me/923406180331"
