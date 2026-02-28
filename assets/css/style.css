@@ -12,6 +12,7 @@ h3 {
 
 .custom-navbar {
   background: #033d2b;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Mobile Drawer */
@@ -19,9 +20,9 @@ h3 {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
+  width: 90%;
   max-width: 320px;
-  height: 100vh;
+  height: 45vh;
   transition: 0.4s ease;
   z-index: 9999;
   background: #033d2b;
@@ -29,8 +30,9 @@ h3 {
   border-bottom-left-radius: 20px;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
 }
+
 .nav-link {
-  color: #ffd700;
+  color: #e9da67;
 }
 .mobile-drawer::before {
   content: "";
@@ -63,11 +65,36 @@ h3 {
   margin-bottom: 8px;
 }
 
+@media (max-width: 768px) {
+  .drawer-header h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .drawer-header h2 {
+    font-size: 20px;
+  }
+}
+
 .drawer-header p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   letter-spacing: 1px;
 }
+
+@media (max-width: 768px) {
+  .drawer-header p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .drawer-header p {
+    font-size: 11px;
+  }
+}
+
 .drawer-menu {
   list-style: none;
   padding: 0;
@@ -84,6 +111,18 @@ h3 {
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .drawer-menu a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .drawer-menu a {
+    font-size: 16px;
+  }
 }
 
 .drawer-menu a:hover {
@@ -127,6 +166,11 @@ h3 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+@media (max-width: 576px) {
+  .hero-section {
+    max-height: 64vh;
+  }
 }
 
 /* Background Image */
@@ -201,13 +245,11 @@ h3 {
   font-weight: 700;
 }
 
-/* Mobile below 768px */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 36px;
   }
 }
-/* Mobile Phones */
 @media (max-width: 575px) {
   .hero-title {
     font-size: 30px;
@@ -460,7 +502,7 @@ h3 {
   position: absolute;
   inset: 0;
   background: url("../images/hero.png"); /* Islamic subtle pattern */
-  opacity: 0.05;
+  opacity: 0.1;
   z-index: 0;
 }
 
@@ -542,9 +584,8 @@ h3 {
   color: #b89600;
 }
 
-/* Description */
 .course-card p {
-  color: #2b393d; /* softer gray for contrast on glass */
+  color: #2b393d; 
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 0;
@@ -562,7 +603,6 @@ h3 {
   }
 }
 
-/* Features & Icons */
 .feature-box {
   padding: 25px;
   text-align: center;
@@ -596,7 +636,6 @@ h3 {
   box-shadow: 0 5px 15px rgba(255, 215, 0, 0.25);
 }
 
-/* Subtitle Text */
 #courses .text-muted {
   font-size: 16px;
   color: #6c757d;
@@ -623,8 +662,7 @@ h3 {
   }
 }
 
-/* why */
-/* ================= WHY SECTION PREMIUM ================= */
+/* ================= WHY SECTION ================= */
 
 .why-section {
   padding: 100px 0;
@@ -632,7 +670,6 @@ h3 {
   position: relative;
 }
 
-/* ================= PREMIUM HORIZONTAL LINES ON SIDES ================= */
 .section-title {
   position: relative;
   display: inline-block;
@@ -816,7 +853,7 @@ h3 {
   position: absolute;
   inset: 0;
   background: url("../images/quran.jpg") center center/cover no-repeat;
-  opacity: 0.07;
+  opacity: 0.09;
   z-index: 1;
 }
 
@@ -827,12 +864,32 @@ h3 {
   max-width: 900px;
 }
 
-/* Buttons */
+/* ================= CTA BUTTONS ================= */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap; /* wrap if too long */
+  justify-content: center; /* center horizontally */
+  gap: 12px; 
+}
+
 .btn-cta {
-  border-radius: 50px;
-  padding: 14px 32px;
+  border-radius: 40px;
+  padding: 12px 30px;
+  font-size: 15px;
   font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  white-space: nowrap; 
   transition: all 0.3s ease;
+  min-width: auto;
+}
+
+@media (max-width: 767px) {
+  .btn-cta {
+    padding: 8px 20px; 
+    font-size: 13px; 
+    max-width: 170px; 
+  }
 }
 
 .btn-gold {
@@ -948,8 +1005,24 @@ h3 {
   z-index: 2;
   padding-bottom: 120px; /* space before mosque */
 }
+.footer-paragraph {
+  color: #e0dfdf;
+  font-size: 16px;
+}
 
-/* links */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 16x;
+  }
+}
+@media (max-width: 575px) {
+  .footer-title,
+  .footer-paragraph,
+  .footer-links {
+    font-size: 14px;
+  }
+}
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -963,13 +1036,17 @@ h3 {
   transition: 0.3s;
   cursor: pointer;
 }
-
+@media (max-width: 576px) {
+  .contact-text,
+  .footer-bottom {
+    font-size: 14px;
+  }
+}
 .footer-links a:hover {
   color: #ffd700;
-  transform: translateX(5px);
+  transform: translateX(1px);
 }
 
-/* social */
 .footer-social a {
   width: 42px;
   height: 42px;
@@ -988,11 +1065,9 @@ h3 {
 .footer-social a:hover {
   background: #ffd700;
   color: #033d2b;
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #ffd700;
+  box-shadow: 0 0 6px #ffd700;
 }
 
-/* button */
 .footer-btn {
   background: #ffd700;
   color: #033d2b;
@@ -1006,7 +1081,6 @@ h3 {
   color: #033d2b;
 }
 
-/* divider */
 .footer-divider {
   border-color: rgba(255, 255, 255, 0.541);
   margin: 40px 0 20px;
@@ -1017,7 +1091,6 @@ h3 {
   color: #cccccccb;
 }
 
-/* mosque silhouette */
 .mosque {
   position: absolute;
   bottom: 0;
