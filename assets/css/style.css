@@ -10,29 +10,137 @@ h3 {
 
 /* Navbar */
 
-.custom-navbar {
-  background: #033d2b;
-  font-family: "Roboto", sans-serif;
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 80px;
+  }
 }
 
-/* Mobile Drawer */
+@media (max-width: 576px) {
+  .navbar-logo {
+    height: 60px;
+  }
+}
+
+
+.about-section {
+  position: relative;
+  background: #f8fdfb;
+  overflow: hidden;
+}
+
+/* subtle pattern */
+.custom-navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/mosque.jpg");
+  opacity: 0.1;
+}
+.custom-navbar {
+  background: #ffffff; /* clean white */
+  font-family: "Roboto", sans-serif;
+  padding: 10px 0;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06); /* soft premium shadow */
+  transition: all 0.3s ease;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #333 !important; /* dark grey */
+  font-weight: 500;
+  margin-left: 18px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Purple Hover Effect */
+.nav-link:hover {
+  color: #ffd700 !important; 
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
 .mobile-drawer {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 90%;
+  width: 80%;
   max-width: 320px;
-  height: 45vh;
+  height: 55vh;
   transition: 0.4s ease;
   z-index: 9999;
-  background: #033d2b;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  background: #033d2b; /* white drawer */
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -15px 0 40px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
 }
 
-.nav-link {
-  color: #e9da67;
+.navbar-toggler-icon {
+  background-image: none; /* remove default icon */
+  width: 24px;
+  height: 2px;
+  background-color: #033d2b;
+  position: relative;
+}
+
+/* Create top & bottom lines */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #033d2b;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
+
+
+/* Drawer Links */
+.mobile-drawer .nav-link {
+  color: #333 !important;
+  display: block;
+  margin: 18px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Drawer Hover */
+.mobile-drawer .nav-link:hover {
+  color: #5e2b97 !important;
+}
+.navbar-toggler i {
+  color: #5e2b97;
+  font-size: 24px;
 }
 .mobile-drawer::before {
   content: "";
@@ -142,8 +250,8 @@ h3 {
 /* Close Button */
 .close-btn {
   position: absolute;
-  top: 25px;
-  right: 30px;
+  top: -19px;
+  right: -20px;
   font-size: 35px;
   color: white;
   cursor: pointer;
@@ -353,11 +461,11 @@ h3 {
 
 @media (max-width: 768px) {
   .feature-item {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .feature-item i {
-    font-size: 18px; 
+    font-size: 18px;
   }
 }
 
@@ -367,7 +475,7 @@ h3 {
   }
 
   .feature-item i {
-    font-size: 16px; 
+    font-size: 16px;
   }
 }
 
