@@ -60,26 +60,30 @@ h3 {
 }
 .drawer-header h2 {
   color: #ffd700;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
+      margin-top: 5px;
 }
 
 @media (max-width: 768px) {
-  .drawer-header h2 {
-    font-size: 25px;
+  .drawer-header h2 
+  {
+    font-size: 22px;
+        margin-top: 5px;
   }
 }
 
 @media (max-width: 575px) {
   .drawer-header h2 {
     font-size: 20px;
+    margin-top: 5px;
   }
 }
 
 .drawer-header p {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 
@@ -107,7 +111,7 @@ h3 {
 
 .drawer-menu a {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
@@ -115,7 +119,7 @@ h3 {
 
 @media (max-width: 768px) {
   .drawer-menu a {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
