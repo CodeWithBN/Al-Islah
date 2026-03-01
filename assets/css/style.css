@@ -485,11 +485,21 @@ h3 {
   padding: 70px 0;
 }
 
-.section-titles {
+.section-titles 
+{
   font-size: 26px;
   color: #056d4d;
   font-weight: 700;
 }
+
+@media (max-width: 576px) 
+{
+  .section-titles 
+{
+  font-size: 20px;
+}
+}
+
 
 /* ================= ABOUT SECTION ================= */
 
