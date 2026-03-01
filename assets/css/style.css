@@ -979,23 +979,7 @@ h3 {
   line-height: 1.8;
 }
 
-/* Feature Cards Glass Style */
-.feature-card {
-  position: relative;
-  padding: 30px 20px;
-  border-radius: 18px;
-  text-align: center;
-  transition: all 0.35s ease;
-  overflow: hidden;
-
-  /* Glass effect */
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.feature-card:hover {
+.about-card:hover {
   transform: translateY(-4px); /* subtle */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
@@ -1031,7 +1015,7 @@ h3 {
   box-shadow: 0 4px 15px rgba(5, 109, 77, 0.25);
 }
 
-.feature-card:hover .feature-icon-box {
+.about-card:hover .feature-icon-box {
   background: linear-gradient(135deg, #ffd700, #e6c200);
   color: #033d2b;
   transform: scale(1.1);
@@ -1039,24 +1023,17 @@ h3 {
 }
 
 /* Title */
-.feature-card h5 {
+.about-card h5 {
   font-weight: 600;
   color: #056d4d;
   margin-bottom: 12px;
   transition: 0.3s;
 }
 
-.feature-card:hover h5 {
+.about-card:hover h5 {
   color: #b89600;
 }
 
-/* Text */
-.feature-card p {
-  font-size: 14.5px;
-  color: #d8e1e3; /* softer for glass */
-  margin-bottom: 0;
-  line-height: 1.7;
-}
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
