@@ -46,32 +46,109 @@
           max-height: 60vh;
         }
       }
-      /* Dark luxury overlay */
+      /* Hero overlay: darker, balanced */
       .admission-hero .hero-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(3, 45, 32, 0.92),
-          rgba(5, 109, 77, 0.88)
-        );
+        background: rgba(1, 32, 22, 0.788);
+      
         z-index: 1;
+        pointer-events: none;
       }
 
-      /* Soft golden radial glow */
+      /* Primary soft golden glow */
       .admission-hero .hero-glow {
         position: absolute;
-        width: 650px;
-        height: 650px;
+        width: 500px;
+        height: 500px;
         background: radial-gradient(
           circle,
-          rgba(255, 215, 0, 0.18),
-          transparent 70%
+          rgba(255, 215, 0, 0.15),
+          /* subtle gold glow */ transparent 80%
         );
-        top: -200px;
-        right: -150px;
+        top: -150px;
+        right: -100px;
+        filter: blur(120px);
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* Secondary floating radial for depth/material effect */
+      .admission-hero .hero-glow-secondary {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 223, 100, 0.08),
+          transparent 85%
+        );
+        bottom: -180px;
+        left: -120px;
+        filter: blur(100px);
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* Floating abstract shapes layer (material feel) */
+      .admission-hero .hero-floating {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.03); /* soft translucent */
+        border-radius: 50%;
+        top: 50px;
+        left: 30%;
+        transform: translateY(0) rotate(0deg);
+        animation: floatShape 12s ease-in-out infinite;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .admission-hero .hero-floating:nth-child(2) {
+        width: 220px;
+        height: 220px;
+        top: 200px;
+        left: 60%;
+        animation-duration: 18s;
+        background: rgba(255, 223, 100, 0.02);
+      }
+
+      .admission-hero .hero-floating:nth-child(3) {
+        width: 180px;
+        height: 180px;
+        top: 350px;
+        left: 20%;
+        animation-duration: 15s;
+        background: rgba(255, 215, 0, 0.025);
+      }
+
+      /* Floating animation */
+      @keyframes floatShape {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-30px) rotate(15deg);
+        }
+      }
+
+      /* Optional secondary glow for depth */
+      .admission-hero .hero-glow-secondary {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 223, 100, 0.08),
+          transparent 85%
+        );
+        bottom: -150px;
+        left: -100px;
         filter: blur(90px);
-        z-index: 1;
+        z-index: 2;
+        pointer-events: none;
       }
 
       /* Content */
@@ -149,8 +226,6 @@
         margin: 8px;
       }
 
-      /* ================= BUTTON STYLING ================= */
-
       /* ================= Primary Custom Button ================= */
       .btn-primary-custom {
         display: inline-block;
@@ -214,7 +289,6 @@
       }
 
       /* ================= INFO SECTION ================= */
-      /* ================= Admission Info Section ================= */
       .admission-info-section {
         padding: 110px 20px;
         background: linear-gradient(to bottom, #f9fafb, #eef2f3);
@@ -328,7 +402,6 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
       }
 
-      /* Secure Text */
       .secure-text {
         display: block;
         margin-top: 18px;
@@ -438,34 +511,8 @@
         color: #fff;
         padding: 80px 20px 60px;
         overflow: hidden;
-        background: url("assets/images/mosque.jpg") center/cover no-repeat;
-        min-height: auto; /* allow natural height */
-      }
-
-      .hero-overlay {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.25);
-        z-index: 0;
-        pointer-events: none;
-      }
-
-      .hero-glow {
-        content: "";
-        position: absolute;
-        top: -100px;
-        left: -100px;
-        width: 400px;
-        height: 400px;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 50%;
-        filter: blur(80px);
-        z-index: 0;
-        pointer-events: none;
+        background: url("assets/images/a.jpg") center/cover no-repeat;
+        min-height: auto;
       }
 
       /* Content */
