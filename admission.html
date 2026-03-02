@@ -436,7 +436,7 @@
         display: block;
         text-align: center;
         color: #fff;
-        padding: 80px 20px 60px; 
+        padding: 80px 20px 60px;
         overflow: hidden;
         background: url("assets/images/mosque.jpg") center/cover no-repeat;
         min-height: auto; /* allow natural height */
@@ -542,10 +542,15 @@
     </style>
   </head>
   <body>
-    <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">AL-Islah Network</a>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/logo.png"
+            alt="AL-Islah Network Logo"
+            class="navbar-logo"
+          />
+        </a>
 
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" id="menuToggle">
@@ -579,20 +584,17 @@
         <span class="close-btn" id="closeDrawer">&times;</span>
 
         <!-- Drawer Header -->
-        <div class="drawer-header">
+        <div class="drawer-header mb-0">
           <h2>AL-Islah Network</h2>
           <p>Learn • Grow • Connect with Quran</p>
         </div>
 
-        <!-- Divider -->
-        <div class="drawer-divider"></div>
-
         <!-- Menu -->
-        <ul class="drawer-menu">
+        <ul class="drawer-menu mb-0">
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#courses">Courses</a></li>
-          <li><a href="#admission" active>Admission</a></li>
+          <li><a href="admission.html">Admission</a></li>
         </ul>
       </div>
     </div>
