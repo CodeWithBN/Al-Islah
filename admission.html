@@ -27,20 +27,6 @@
     <style>
       /* ================= HERO SECTION ================= */
 
-      .admission-hero {
-        position: relative;
-        height: 88vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 150px 20px 110px;
-        overflow: hidden;
-        color: #fff;
-
-        background: url("/assets/images/mosque.jpg") center/cover no-repeat;
-      }
-
       @media (max-width: 576px) {
         .admission-hero {
           max-height: 60vh;
@@ -51,7 +37,7 @@
         position: absolute;
         inset: 0;
         background: rgba(1, 32, 22, 0.788);
-      
+
         z-index: 1;
         pointer-events: none;
       }
@@ -507,10 +493,13 @@
       .admission-hero {
         position: relative;
         display: block;
+        height: 88vh;
         text-align: center;
         color: #fff;
         padding: 80px 20px 60px;
         overflow: hidden;
+        align-items: center;
+        justify-content: center;
         background: url("assets/images/a.jpg") center/cover no-repeat;
         min-height: auto;
       }
@@ -521,14 +510,18 @@
         z-index: 2;
         max-width: 850px;
         margin: 0 auto;
-      }
-
-      /* Heading */
-      .hero-head {
-        font-size: 38px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        letter-spacing: 0.5px;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
       }
 
       /* Paragraph */
@@ -537,7 +530,7 @@
         max-width: 700px;
         margin: 0 auto 25px auto;
         line-height: 1.6;
-        opacity: 0.95;
+        opacity: 0.75;
       }
 
       /* Buttons */
@@ -555,7 +548,7 @@
         }
 
         .hero-head {
-          font-size: 22px;
+          font-size: 30px;
         }
 
         .hero-content p {
@@ -574,7 +567,7 @@
         }
 
         .hero-head {
-          font-size: 18px;
+          font-size: 26px;
         }
 
         .hero-content p {
@@ -586,6 +579,72 @@
           padding: 3px 10px;
         }
       }
+      .contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Common button style */
+.btn-contact {
+  display: flex;
+  align-items: center;
+  color: #ffffff; /* white text */
+  background-color: rgba(0, 0, 0, 0.2); /* subtle transparent overlay */
+  border: 2px solid rgba(255,255,255,0.6); /* soft border */
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  backdrop-filter: blur(4px); /* gives subtle floating effect */
+}
+
+/* WhatsApp hover effect */
+.btn-whatsapp:hover {
+  background-color: rgba(37, 211, 102, 0.2); /* soft green overlay */
+  border-color: #25D366;
+}
+
+/* Email hover effect */
+.btn-email:hover {
+  background-color: rgba(37, 99, 235, 0.2); /* soft blue overlay */
+  border-color: #2563EB;
+}
+
+/* Icon spacing */
+.btn-contact i {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+/* Text size */
+.btn-contact {
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .btn-contact {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+  .btn-contact i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-contact {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  .btn-contact i {
+    font-size: 0.9rem;
+  }
+}
     </style>
   </head>
   <body>
@@ -614,7 +673,7 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#courses">Courses</a>
+              <a class="nav-link" href="courses.html">Courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="admission.html">Admission</a>
@@ -640,7 +699,7 @@
         <ul class="drawer-menu mb-0">
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#courses">Courses</a></li>
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="admission.html">Admission</a></li>
         </ul>
       </div>
@@ -653,11 +712,11 @@
       <div class="hero-glow"></div>
 
       <div class="container hero-content">
-        <span class="hero-badge mt-0">AL-Islah Network Admissions</span>
+        <span class="hero-badge mt-5">AL-Islah Network Admissions</span>
 
-        <h1 class="hero-head">Begin Your Sacred Learning Journey</h1>
+        <h2 class="hero-head mt-2">Begin Your Sacred Learning Journey</h2>
 
-        <p>
+        <p class="lead">
           Structured online Quran programs designed for children, adults, and
           families worldwide — guided by qualified teachers.
         </p>
@@ -692,8 +751,24 @@
             </ul>
 
             <div class="contact-box">
-              <p><strong>WhatsApp:</strong> +92 340 6180331</p>
-              <p><strong>Email:</strong> bushranazar049@gmail.com</p>
+              <div class="contact-buttons">
+                <a
+                  href="https://wa.me/923406180331"
+                  target="_blank"
+                  class="btn-contact btn-whatsapp"
+                >
+                  <i class="bi bi-whatsapp me-2"></i>
+                  WhatsApp: +92 340 6180331
+                </a>
+
+                <a
+                  href="mailto:rajasaad0898@gmail.com"
+                  class="btn-contact btn-email"
+                >
+                  <i class="bi bi-envelope-fill me-2"></i>
+                  Email: rajasaad0898@gmail.com
+                </a>
+              </div>
             </div>
           </div>
 

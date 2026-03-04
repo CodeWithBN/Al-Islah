@@ -312,8 +312,8 @@ h3 {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(4, 82, 58, 0.65),
-    rgba(4, 82, 58, 0.85)
+    rgba(3, 59, 42, 0.65),
+    rgba(5, 48, 35, 0.85)
   );
   z-index: 2;
 }
@@ -525,13 +525,12 @@ h3 {
 
 .about-card:hover {
   transform: translateY(-2px);
-  cursor: pointer; /* classic and expected for clickable cards */
+  cursor: pointer;
   transition:
     transform 0.4s,
     box-shadow 0.4s;
 }
 
-/* text */
 .about-text {
   color: #555;
   margin: 15px 0;
@@ -703,182 +702,94 @@ h3 {
   background: #fada28;
   color: #033d2b;
 }
-/* ================= PREMIUM COURSES SECTION ================= */
 
-#courses {
-  position: relative;
-  background: linear-gradient(
-    to bottom,
-    #f4f9f7,
-    #ffffff
-  ); /* light luxury gradient */
-  padding: 80px 0;
-  overflow: hidden;
+/* ===== COURSES SECTION ===== */
+
+.courses-section {
+  background:
+    linear-gradient(rgba(10, 62, 36, 0.616), rgba(6, 38, 22, 0.9)),
+    url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1600")
+      center/cover no-repeat;
+  padding: 90px 0;
+  color: #f5f5f5;
 }
 
-#courses::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../images/hero.png"); /* Islamic subtle pattern */
-  opacity: 0.3;
-  z-index: 0;
+/* Section Title */
+.courses-section .section-titlee {
+  color: #d4af37;
 }
 
-/* Container inside section */
-#courses .container {
-  position: relative;
-  z-index: 1;
+.courses-section .section-subtitle {
+  color: #e0e0e0;
 }
 
-/* ================= COURSE CARDS ================= */
+/* ===== Course Card (Structured Dark, Not Glass) ===== */
 
 .course-card {
-  position: relative;
-  padding: 30px;
-  border-radius: 18px;
-  overflow: hidden;
+  background: #0b3a2cb8;
+  padding: 32px 26px;
+  border-radius: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
   transition: all 0.35s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-  /* Glass effect */
-  background: rgba(255, 255, 255, 0.08); /* frosted glass */
-  backdrop-filter: blur(12px); /* blur background behind card */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* subtle hover */
-.course-card:hover {
-  transform: translateY(-3px); /* subtle lift only */
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* optional shiny overlay for depth */
-.course-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
-  pointer-events: none;
-}
-
-/* Icon Circle */
-.course-icon-wrapper {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #056d4d, #0a8f63);
-  color: white;
-  font-size: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  transition: 0.4s ease;
-  box-shadow: 0 5px 15px rgba(5, 109, 77, 0.25);
-}
-
-.course-card:hover .course-icon-wrapper {
-  background: linear-gradient(135deg, #ffd700, #e6c200);
-  color: #033d2b;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.35);
-  transform: scale(1.05);
-}
-
-/* Course Title */
-.course-card h5 {
-  font-weight: 600;
-  color: #056d4d;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.course-card:hover h5 {
-  color: #b89600;
-}
-
-.course-card p {
-  color: #2b393d;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-/* Responsive spacing */
-@media (max-width: 576px) {
-  .course-card {
-    padding: 25px 20px;
-  }
-  .course-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    font-size: 26px;
-  }
-}
-
-.feature-box {
-  padding: 25px;
+  position: relative;
   text-align: center;
 }
 
-.feature-icon {
-  font-size: 35px;
-  color: #056d4d;
-  transition: 0.3s;
+.course-card:hover {
+  transform: translateY(-1px);
+  border-color: #d4af37;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-.feature-box:hover .feature-icon {
-  color: #ffd700;
-  transform: scale(1.1);
-}
-
-/* Course Buttons (if any) */
-.btn-gold {
-  background: #ffd700;
-  color: #033d2b;
+/* Badge */
+.course-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #d4af37;
+  color: #032d20;
+  font-size: 11px;
+  padding: 5px 14px;
   border-radius: 30px;
-  padding: 10px 25px;
   font-weight: 600;
-  transition: 0.3s;
 }
 
-.btn-gold:hover {
-  background: #fada28;
-  color: #033d2b;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.25);
+/* Icon */
+.course-icon {
+  font-size: 30px;
+  color: #d4af37;
+  margin-bottom: 14px;
 }
 
-#courses .text-muted {
-  font-size: 16px;
-  color: #6c757d;
-  max-width: 650px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
+/* Card Text */
+.course-card h5 {
+  color: #ffffff;
+  font-weight: 600;
 }
 
-/* Responsive Cards */
-@media (max-width: 992px) {
-  .course-card {
-    margin-bottom: 30px;
-  }
+.course-card p {
+  color: #cfd8d3;
+  font-size: 14px;
 }
 
-@media (max-width: 576px) {
-  .course-card {
-    padding: 25px 20px;
-  }
-  .course-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    font-size: 26px;
-  }
+/* Urdu */
+.course-card .hero-urdu {
+  color: #e9f4ee;
+}
+
+/* Button */
+.btn-outline-gold {
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 6px 20px;
+  font-size: 13px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: #d4af37;
+  color: #032d20;
 }
 
 /* ================= WHY SECTION ================= */
@@ -916,20 +827,25 @@ h3 {
   padding: 0 20px; /* space around text */
   text-align: center;
 }
+.section-titlee {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0 20px; 
+}
 /* Mobile below 768px */
 @media (max-width: 768px) {
-  .section-title {
+  .section-title,
+  .section-titlee {
     font-size: 2rem;
   }
 }
-/* Mobile Phones */
 @media (max-width: 575px) {
-  .section-title {
-    font-size: 1.8rem; /* smaller font for phones */
+  .section-title,
+  .section-titlee {
+    font-size: 1.8rem; 
   }
 }
 
-/* Left and right lines */
 .section-title::before,
 .section-title::after {
   content: "";
@@ -1019,7 +935,6 @@ h3 {
   box-shadow: 0 8px 25px rgba(255, 215, 0, 0.35);
 }
 
-/* Title */
 .about-card h5 {
   font-weight: 600;
   color: #056d4d;
@@ -1161,7 +1076,7 @@ h3 {
 
 .footer {
   position: relative;
-  background: #033d2b;
+  background: #02271b;
   color: white;
   padding-top: 80px;
   overflow: hidden;
@@ -1206,7 +1121,6 @@ h3 {
   margin-bottom: 15px;
 }
 
-/* titles */
 .footer-title {
   color: #ffd700;
   margin-bottom: 15px;
@@ -1354,3 +1268,20 @@ h3 {
   animation: floatMosque 20s linear infinite;
   z-index: 1;
 }
+
+  @media (max-width: 768px) {
+        .courses-hero h1 {
+          font-size: 2.2rem;
+        }
+        .courses-hero .lead,
+        .hero-urdu {
+          font-size: 1rem;
+        }
+      }
+       @media screen and (max-width: 576px) {
+        .hero-urdu
+        {
+                  font-size: 0.8rem;
+        }
+        
+      }
