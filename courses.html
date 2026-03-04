@@ -146,6 +146,9 @@ section::after {
   min-height: 32px;     
   font-size: 1rem;
   font-weight: 600;
+  border: 1px solid #f1e6c1; 
+ 
+
 }
 
 @media (max-width: 576px) {
@@ -199,8 +202,10 @@ section::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/images/hero.png");
-  opacity: 0.25;
+  background: url("assets/images/hero.png") no-repeat center center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;  opacity: 0.25;
   z-index: 0;
 }
 .course-overlay { display: none; }
@@ -212,14 +217,14 @@ section::after {
   transition: all 0.25s ease;
   box-shadow: 0 6px 20px rgba(0,0,0,0.07);
   background: rgba(255,255,255,0.45); 
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgb(217, 229, 195);
 }
 
 .course-info-premium {
   background: #ffffff; 
   padding: 25px;
-  border-radius: 18px;
-  border: 1px solid #d4af37; 
+ border-radius: 5px 5px 18px 18px;
+   border: 1px solid #f1e6c1; 
   box-shadow: 0 6px 20px rgba(212,175,55,0.2); 
   color: #333;
 }
@@ -251,6 +256,7 @@ section::after {
   .course-meta li { font-size: 0.8rem; }
   .btn-premium { padding: 8px 12px; font-size: 0.85rem; }
 }
+
 
     </style>
   </head>
@@ -350,8 +356,10 @@ section::after {
             حفظ قرآن پروگرام طلبہ و طالبات کے لیے ترتیب دیا گیا ہے جس میں سبق
             کی باقاعدہ نگرانی، دہرائی، اور کارکردگی کا جائزہ شامل ہے۔
           </div>
+        </div>
 
-          <div class="accordion mt-4" id="hifzAccordion">
+        <div class="col-lg-5 mt-4">
+             <div class="accordion mt-2" id="hifzAccordion">
             <div class="accordion-item premium-accordion">
               <h2 class="accordion-header">
                 <button
@@ -376,10 +384,6 @@ section::after {
               </div>
             </div>
           </div>
-
-        </div>
-
-        <div class="col-lg-5">
           <div class="course-info-premium">
             <span class="status-badge-premium">
               <i class="bi bi-check-circle-fill me-1"></i>
@@ -427,9 +431,12 @@ section::after {
             یہ کورس طلبہ کو عربی زبان کی بنیادیں مضبوط کرنے اور قرآن کی بہتر
             سمجھ کے لیے ترتیب دیا گیا ہے۔
           </div>
+        </div>
 
-          <!-- ACCORDION -->
-          <div class="accordion mt-4" id="arabicAccordion">
+        <!-- RIGHT SIDE INFO -->
+        <div class="col-lg-5 mt-4">
+  <!-- ACCORDION -->
+          <div class="accordion mt-2" id="arabicAccordion">
             <div class="accordion-item premium-accordion">
               <h2 class="accordion-header">
                 <button
@@ -459,12 +466,6 @@ section::after {
               </div>
             </div>
           </div>
-
-        </div>
-
-        <!-- RIGHT SIDE INFO -->
-        <div class="col-lg-5">
-
           <div class="course-info-premium">
 
             <span class="status-badge-premium">
@@ -499,7 +500,7 @@ section::after {
       <div class="row align-items-center g-5 flex-lg-row-reverse">
 
         <!-- LEFT CONTENT -->
-        <div class="col-lg-7">
+        <div class="col-lg-7 mb-0">
 
           <h2 class="section-title-premium text-center">
             Basic Tajweed Course (BTC)
@@ -518,9 +519,12 @@ section::after {
             یہ کورس بنیادی تجوید سکھاتا ہے، جس میں حروف کی ادائیگی، مخرج اور
             صفات، اور صحیح قراءت شامل ہیں۔
           </div>
+        </div>
 
-          <!-- ACCORDION -->
-          <div class="accordion mt-4" id="btcAccordion">
+        <!-- RIGHT INFO CARD -->
+        <div class="col-lg-5 mt-4">
+ <!-- ACCORDION -->
+          <div class="accordion mt-2 mb-0" id="btcAccordion">
             <div class="accordion-item premium-accordion">
               <h2 class="accordion-header">
                 <button
@@ -550,12 +554,6 @@ section::after {
               </div>
             </div>
           </div>
-
-        </div>
-
-        <!-- RIGHT INFO CARD -->
-        <div class="col-lg-5">
-
           <div class="course-info-premium">
 
             <span class="status-badge-premium">
@@ -590,7 +588,6 @@ section::after {
       <div class="row align-items-center g-5">
         <!-- LEFT CONTENT -->
         <div class="col-lg-7">
-
           <h2 class="section-title-premium text-center">
             Hadith Course
           </h2>
@@ -609,8 +606,12 @@ section::after {
             ترتیب دیا گیا ہے۔
           </div>
 
-          <!-- ACCORDION -->
-          <div class="accordion mt-4" id="hadithAccordion">
+        </div>
+
+        <!-- RIGHT INFO -->
+        <div class="col-lg-5 mt-4">
+    <!-- ACCORDION -->
+          <div class="accordion mt-2" id="hadithAccordion">
             <div class="accordion-item premium-accordion">
               <h2 class="accordion-header">
                 <button
@@ -645,12 +646,6 @@ section::after {
               </div>
             </div>
           </div>
-
-        </div>
-
-        <!-- RIGHT INFO -->
-        <div class="col-lg-5">
-
           <div class="course-info-premium">
 
             <span class="status-badge-premium">
@@ -702,8 +697,12 @@ section::after {
             تاکہ وہ درست تلفظ اور روانی کے ساتھ قرآن کی تلاوت کریں۔
           </div>
 
-          <!-- ACCORDION -->
-          <div class="accordion mt-4" id="tajweedAccordion">
+        </div>
+
+        <!-- RIGHT INFO -->
+        <div class="col-lg-5 mt-4">
+  <!-- ACCORDION -->
+          <div class="accordion mt-2" id="tajweedAccordion">
             <div class="accordion-item premium-accordion">
               <h2 class="accordion-header">
                 <button
@@ -734,12 +733,6 @@ section::after {
               </div>
             </div>
           </div>
-
-        </div>
-
-        <!-- RIGHT INFO -->
-        <div class="col-lg-5">
-
           <div class="course-info-premium">
 
             <span class="status-badge-premium">
@@ -789,9 +782,12 @@ section::after {
             یہ کورس طلبہ کو روزانہ ایک آیت کی تلاوت، ترجمہ اور وضاحت فراہم
             کرتا ہے تاکہ قرآنی تعلیم میں بہتری آئے۔
           </div>
+        </div>
 
-          <!-- ACCORDION -->
-          <div class="accordion mt-4" id="qcAccordion">
+        <!-- RIGHT INFO -->
+        <div class="col-lg-5 mt-4">
+             <!-- ACCORDION -->
+          <div class="accordion mt-2" id="qcAccordion">
             <div class="accordion-item premium-accordion">
 
               <h2 class="accordion-header">
@@ -825,11 +821,6 @@ section::after {
 
             </div>
           </div>
-
-        </div>
-
-        <!-- RIGHT INFO -->
-        <div class="col-lg-5">
 
           <div class="course-info-premium">
 
