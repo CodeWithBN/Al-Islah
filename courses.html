@@ -19,379 +19,267 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-      html,
-      body {
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-        scroll-behavior: smooth;
-        font-family: system-ui !important;
-      }
-
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-      section::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 200px;
-        height: 4px;
-        background: linear-gradient(90deg, #d4af37, #f6e27f, #d4af37);
-        transform: translateX(-50%);
-        border-radius: 10px;
-        opacity: 0.8;
-        margin-bottom: 40px;
-      }
-
-      /* HERO */
-      .courses-hero {
-        background:
-          linear-gradient(rgba(6, 38, 22, 0.88), rgba(6, 38, 22, 0.88)),
-          url("https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1600")
-            center/cover no-repeat;
-        text-align: center;
-        padding: 150px 20px;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-
-      .courses-hero p {
-        max-width: 850px;
-        margin: 20px auto;
-        opacity: 0.95;
-      }
-      .courses-hero h1 {
-        font-size: 3rem;
-      }
-
-      @media screen and (max-width: 576px) {
-        .courses-hero h1 {
-          font-size: 26px;
-        }
-      }
-
-      .course-block h2 {
-        font-weight: 700;
-        color: #0c6746;
-      }
-      .course-block p {
-        line-height: 1.8;
-      }
-      .course-urdu-block {
-        background: #fdfbf4;
-        padding: 20px;
-        border-left: 4px solid #d4af37;
-        border-bottom: 1px solid #d4af37;
-        border-right: 1px solid #d4af37;
-        border-top: 1px solid #d4af37;
-        border-radius: 10px;
-        margin-top: 15px;
-        direction: rtl;
-      }
-
-      /* INFO BOX */
-      .course-info-box {
-        background: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(14px);
-        padding: 40px;
-        border-radius: 25px;
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
-        transition: 0.4s ease;
-      }
-      .course-info-box:hover {
-        transform: translateY(-10px);
-      }
-      .course-info-box ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 15px;
-      }
-      .course-info-box li {
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
-      .status-badge {
-        background: linear-gradient(45deg, #c9a227, #f6e27f);
-        padding: 8px 18px;
-        border-radius: 30px;
-        font-weight: 600;
-        display: inline-block;
-        margin-bottom: 15px;
-      }
-
-      /* BUTTON */
-      .btn-gold {
-        background: linear-gradient(45deg, #c9a227, #f0d77a);
-        border: none;
-        border-radius: 50px;
-        padding: 12px 25px;
-        font-weight: 600;
-        transition: 0.3s ease;
-        color: #1e2a23;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-      }
-      .btn-gold:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
-      }
-
-      /* ACCORDION */
-      .urdu-curriculum-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .urdu-curriculum-list li {
-        padding: 6px 0;
-        font-size: 1rem; /* Base font size for desktop */
-        line-height: 1.7;
-        display: flex;
-        justify-content: flex-end; /* Right align for Urdu */
-        align-items: center;
-        flex-direction: row-reverse; /* Tick icon on right */
-        transition: transform 0.2s ease;
-      }
-
-      .urdu-curriculum-list li:hover {
-        transform: translateX(-3px);
-      }
-
-      .urdu-curriculum-list li i {
-        font-size: 1.2rem; /* Tick icon size */
-      }
-
-      @media (max-width: 991px) and (min-width: 768px) {
-        .urdu-curriculum-list li {
-          font-size: 0.95rem;
-        }
-        .urdu-curriculum-list li i {
-          font-size: 1.1rem;
-        }
-      }
-
-      /* Small devices / mobile (below 768px) */
-      @media (max-width: 767px) {
-        .urdu-curriculum-list li {
-          font-size: 0.9rem;
-        }
-        .urdu-curriculum-list li i {
-          font-size: 0.9rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .urdu-curriculum-list li {
-          font-size: 0.7rem;
-        }
-        .urdu-curriculum-list li i {
-          font-size: 0.7rem;
-        }
-      }
-      .title {
-        font-size: 24px;
-        color: #0c6746 !important;
-        font-weight: 700;
-      }
-      @media (max-width: 768px) {
-        .title {
-          font-size: 20px !important;
-        }
-      }
-      @media (max-width: 575px) {
-        .title {
-          font-size: 17px !important;
-        }
-      }
-
-    
-      .hero-urdu {
-        font-family: "Noto Nastaliq Urdu", serif !important;
-        margin-top: 15px;
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #140f03;
-        direction: rtl;
-      }
-       @media screen and (max-width: 576px) {
-        .hero-urdu
-        {
-                  font-size: 0.8rem;
-        }
-        
-      }
-      .accordion-button {
-        padding: 0.4rem 1rem;
-        min-height: 30px;
-        font-size: 1rem; 
-      }
-
-.premium-course-section {
-  position: relative;
-  background: linear-gradient(
-    to bottom,
-    #f4f9f7,
-    #ffffff
-  ); /* light luxury gradient */
-  padding: 80px 0;
-  overflow: hidden;
+  /* ==========================
+   BASE STYLING
+========================== */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.premium-course-section::before {
+section {
+  padding: 100px 0;
+  position: relative;
+}
+section::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: url("assets/images/hero.png");
-  opacity: 0.4;
-  z-index: 0;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #f6e27f, #d4af37);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  opacity: 0.8;
+  margin-bottom: 40px;
 }
 
-/* REMOVE DARK OVERLAY COMPLETELY */
-.course-overlay {
-  display: none;
+/* ==========================
+   HERO SECTION
+========================== */
+.courses-hero {
+  background: linear-gradient(rgba(6, 38, 22, 0.85), rgba(6, 38, 22, 0.85)), url("https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1600") center/cover no-repeat;
+  text-align: center;
+  padding: 120px 20px;
+  color: #fff;
+}
+.courses-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.courses-hero p {
+  max-width: 850px;
+  margin: 0 auto 20px auto;
+  opacity: 0.95;
+}
+@media (max-width: 576px) {
+  .courses-hero h1 { font-size: 26px; }
+  .courses-hero p { font-size: 0.85rem; }
 }
 
-/* MAIN CARD - CLEAN WHITE GLASS */
-.premium-course-card {
-  border-radius: 22px;
-  padding: 60px;
-  border: 1px solid #e6efec;
-    position: relative;
-  padding: 30px;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.459); 
-  backdrop-filter: blur(12px); 
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* SECTION TITLE */
+/* ==========================
+   SECTION TITLES
+========================== */
 .section-title-premium {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #0f3d2e; 
+  color: #0f3d2e;
   margin-bottom: 10px;
 }
-
 .urdu-subtitle {
   font-size: 1.4rem;
   color: #14532d;
   font-family: "Noto Nastaliq Urdu", serif;
   margin-bottom: 15px;
 }
+.title {
+  font-size: 24px;
+  color: #0c6746 !important;
+  font-weight: 700;
+}
+@media (max-width: 768px) { .section-title-premium { font-size: 1.7rem; } .title { font-size: 20px !important; } .urdu-subtitle { font-size: 1.2rem; } }
+@media (max-width: 576px) { .section-title-premium { font-size: 1.5rem; } .title { font-size: 17px !important; } .urdu-subtitle { font-size: 1rem; } }
 
-.course-description {
-  color: #555;
-  margin-bottom: 20px;
+/* ==========================
+   URDU HERO TEXT
+========================== */
+.hero-urdu {
+  font-family: "Noto Nastaliq Urdu", serif !important;
+  margin-top: 15px;
+  font-size: 1.05rem;
   line-height: 1.7;
+  color: #140f03;
+  direction: rtl;
 }
+@media (max-width: 576px) { .hero-urdu { font-size: 0.8rem; } }
 
-/* URDU BLOCK */
+/* ==========================
+   COURSE BLOCKS
+========================== */
+.course-block h2 { font-weight: 700; color: #0c6746; }
+.course-block p { line-height: 1.8; }
 .course-urdu-block {
-  color: #444;
+  background: #fdfbf4;
+  padding: 20px;
+  border-left: 4px solid #d4af37;
+    border-right: 1px solid #d4af37;
+    border-top: 1px solid #d4af37;
+    border-bottom: 1px solid #d4af37;
+  border-radius: 10px;
+  margin-top: 15px;
+  direction: rtl;
   line-height: 2;
-  margin-bottom: 25px;
+  color: #444;
 }
 
-/* PREMIUM ACCORDION */
-.premium-accordion {
-  background: #f9fbfa;
-  border: 1px solid #e5ece9;
-  border-radius: 14px;
-  overflow: hidden;
+/* ==========================
+   INFO BOX (GLASSY LIGHTWEIGHT)
+========================== */
+.course-info-box {
+  background: rgba(255,255,255,0.45);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(212,175,55,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
 }
+.course-info-box:hover { transform: translateY(-5px); }
+.course-info-box ul { list-style: none; padding: 0; margin-top: 15px; }
+.course-info-box li { padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
 
-.premium-accordion .accordion-button {
-  background: #f9fbfa;
-  color: #0f3d2e;
+/* ==========================
+   STATUS BADGE
+========================== */
+.status-badge {
+  background: linear-gradient(45deg, #c9a227, #f6e27f);
+  padding: 8px 18px;
+  border-radius: 30px;
   font-weight: 600;
-}
-
-.premium-accordion .accordion-button:not(.collapsed) {
-  background: #eef6f3;
-}
-
-.premium-accordion .accordion-body {
-  background: #ffffff;
-  color: #333;
-}
-
-/* RIGHT INFO CARD */
-.course-info-premium {
-  background: #f9fbfa4e;
-  padding: 35px;
-  border-radius: 18px;
-  border: 1px solid #f9f9d1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-/* STATUS BADGE (NOW SUBTLE) */
-.status-badge-premium {
   display: inline-block;
-  background: #e8f5e9;
-  color: #1b5e20;
-  padding: 6px 16px;
-  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+
+.accordion-button {
+  padding: 0.4rem 1rem; /* reduce vertical padding */
+  min-height: 32px;     /* smaller than default 38px */
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 30px;
-  margin-bottom: 20px;
 }
 
-/* COURSE META */
-.course-meta {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.course-meta li {
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-/* PREMIUM APPLY BUTTON */
-.btn-premium {
-  background: linear-gradient(135deg, #d4af37, #b8962e);
-  color: #ffffff;
-  font-weight: 600;
-  padding: 12px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.btn-premium:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
-  color: #ffffff;
-}
-
-@media (max-width: 992px) {
-  .premium-course-card {
-    padding: 40px;
+/* Optional: further reduce for mobile */
+@media (max-width: 576px) {
+  .accordion-button {
+    padding: 0.25rem 0.8rem;
+    font-size: 0.9rem;
+    min-height: 28px;
   }
+}
+
+/* Ensure Urdu text inside accordion aligns nicely */
+.accordion-button .hero-urdu {
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 576px) {
-  .premium-course-card {
-    padding: 25px;
-  }
-
-  .section-title-premium {
-    font-size: 1.5rem;
-  }
-
-  .urdu-subtitle {
-    font-size: 1.2rem;
+  .accordion-button .hero-urdu {
+    font-size: 0.8rem;
   }
 }
+/* ==========================
+   ACCORDION
+========================== */
+.urdu-curriculum-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.urdu-curriculum-list li {
+  padding: 6px 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse;
+  transition: transform 0.2s ease;
+}
+.urdu-curriculum-list li:hover { transform: translateX(-2px); }
+.urdu-curriculum-list li i { font-size: 1.2rem; }
+@media (max-width: 991px) and (min-width: 768px) { .urdu-curriculum-list li { font-size: 0.95rem; } .urdu-curriculum-list li i { font-size: 1.1rem; } }
+@media (max-width: 767px) { .urdu-curriculum-list li { font-size: 0.9rem; } .urdu-curriculum-list li i { font-size: 0.9rem; } }
+@media (max-width: 480px) { .urdu-curriculum-list li { font-size: 0.75rem; } .urdu-curriculum-list li i { font-size: 0.75rem; } }
+
+/* ==========================
+   PREMIUM COURSE SECTION
+========================== */
+.premium-course-section {
+  position: relative;
+  background: linear-gradient(to bottom, #f4f9f7, #ffffff);
+  padding: 80px 0;
+  overflow: hidden;
+}
+.premium-course-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/hero.png");
+  opacity: 0.25;
+  z-index: 0;
+}
+.course-overlay { display: none; }
+
+/* ==========================
+   PREMIUM CARD
+========================== */
+.premium-course-card {
+  border-radius: 18px;
+  padding: 25px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  background: rgba(255,255,255,0.45); 
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* RIGHT INFO CARD (WHITE WITH GOLD ACCENTS) */
+.course-info-premium {
+  background: #ffffff; /* white */
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #d4af37; /* gold border */
+  box-shadow: 0 6px 20px rgba(212,175,55,0.2); /* subtle gold shadow */
+  color: #333;
+}
+
+/* STATUS BADGE PREMIUM */
+.status-badge-premium {
+  display: inline-block;
+  background: #e3fbed; /* very soft gold */
+  color:#14532d;
+  padding: 5px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+/* COURSE META */
+.course-meta { list-style: none; padding: 0; margin-bottom: 20px; }
+.course-meta li { margin-bottom: 8px; font-size: 0.9rem; color: #333; }
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 992px) {
+  .premium-course-card, .course-info-premium { padding: 20px; }
+  .course-meta li { font-size: 0.85rem; }
+  .btn-premium { padding: 9px 14px; font-size: 0.9rem; }
+}
+
+@media (max-width: 576px) {
+  .premium-course-card, .course-info-premium { padding: 15px; }
+  .section-title-premium { font-size: 1.5rem; }
+  .urdu-subtitle { font-size: 1rem; }
+  .course-meta li { font-size: 0.8rem; }
+  .btn-premium { padding: 8px 12px; font-size: 0.85rem; }
+}
+
     </style>
   </head>
   <body>
@@ -532,9 +420,10 @@
               <li><strong>Mode:</strong> Online</li>
               <li><strong>For:</strong> Male & Female</li>
             </ul>
-            <a href="admission.html" class="btn btn-premium w-100">
-              Apply for Admission
-            </a>
+     
+ <a href="admission.html" class="btn btn-gold mt-3 text-center">
+  Apply for Admission
+                </a>
           </div>
         </div>
       </div>
@@ -618,9 +507,9 @@
               <li><strong>Teacher:</strong> Hafiz Ramzan Farooqi</li>
             </ul>
 
-            <a href="admission.html" class="btn btn-premium w-100">
-              Apply for Admission
-            </a>
+             <a href="admission.html" class="btn btn-gold mt-3 text-center">
+  Apply for Admission
+                </a>
 
           </div>
 
@@ -708,9 +597,9 @@
               <li><strong>Mode:</strong> Online</li>
             </ul>
 
-            <a href="admission.html" class="btn btn-premium w-100">
-              Apply for Admission
-            </a>
+            <a href="admission.html" class="btn btn-gold mt-3 text-center">
+  Apply for Admission
+                </a>
 
           </div>
 
@@ -803,9 +692,9 @@
               <li><strong>Level:</strong> Intermediate</li>
             </ul>
 
-            <a href="admission.html" class="btn btn-premium w-100">
-              Apply for Admission
-            </a>
+           <a href="admission.html" class="btn btn-gold mt-3 text-center">
+  Apply for Admission
+                </a>
 
           </div>
 
@@ -892,9 +781,9 @@
               <li><strong>Level:</strong> Advanced</li>
             </ul>
 
-            <a href="admission.html" class="btn btn-premium w-100">
-              Apply for Admission
-            </a>
+           <a href="admission.html" class="btn btn-gold mt-3 text-center">
+  Apply for Admission
+                </a>
 
           </div>
 
@@ -983,9 +872,9 @@
               <li><strong>Teacher:</strong> Maulana Farooq</li>
             </ul>
 
-            <a href="admission.html" class="btn btn-premium w-100">
-              Apply for Admission
-            </a>
+            <a href="admission.html" class="btn btn-gold mt-3 text-center">
+  Apply for Admission
+                </a>
 
           </div>
 
