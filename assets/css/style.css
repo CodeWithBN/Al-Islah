@@ -380,18 +380,17 @@ h3 {
   background: #edca05;
 }
 
-/* ====== RESPONSIVE SIZES ====== */
 @media (max-width: 768px) {
   .btn-gold {
-    padding: 10px 24px; /* slightly smaller */
-    font-size: 0.9rem; /* smaller text */
+    padding: 10px 24px; 
+    font-size: 0.9rem; 
   }
 }
 
 @media (max-width: 480px) {
   .btn-gold {
-    padding: 8px 18px; /* compact for mobile */
-    font-size: 0.8rem; /* smaller text for readability */
+    padding: 8px 18px;
+    font-size: 0.8rem;
   }
 }
 
@@ -1248,6 +1247,6 @@ h3 {
 }
 @media screen and (max-width: 576px) {
   .hero-urdu {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
