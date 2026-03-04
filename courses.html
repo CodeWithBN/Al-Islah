@@ -19,9 +19,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-  /* ==========================
-   BASE STYLING
-========================== */
+
 html, body {
   overflow-x: hidden;
   margin: 0;
@@ -47,10 +45,7 @@ section::after {
   opacity: 0.8;
   margin-bottom: 40px;
 }
-
-/* ==========================
-   HERO SECTION
-========================== */
+/* Hero */
 .courses-hero {
   background: linear-gradient(rgba(6, 38, 22, 0.85), rgba(6, 38, 22, 0.85)), url("https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1600") center/cover no-repeat;
   text-align: center;
@@ -107,9 +102,7 @@ section::after {
 }
 @media (max-width: 576px) { .hero-urdu { font-size: 0.8rem; } }
 
-/* ==========================
-   COURSE BLOCKS
-========================== */
+   /* COURSE BLOCKS */
 .course-block h2 { font-weight: 700; color: #0c6746; }
 .course-block p { line-height: 1.8; }
 .course-urdu-block {
@@ -126,9 +119,6 @@ section::after {
   color: #444;
 }
 
-/* ==========================
-   INFO BOX (GLASSY LIGHTWEIGHT)
-========================== */
 .course-info-box {
   background: rgba(255,255,255,0.45);
   padding: 25px;
@@ -141,9 +131,6 @@ section::after {
 .course-info-box ul { list-style: none; padding: 0; margin-top: 15px; }
 .course-info-box li { padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
 
-/* ==========================
-   STATUS BADGE
-========================== */
 .status-badge {
   background: linear-gradient(45deg, #c9a227, #f6e27f);
   padding: 8px 18px;
@@ -155,13 +142,12 @@ section::after {
 
 
 .accordion-button {
-  padding: 0.4rem 1rem; /* reduce vertical padding */
-  min-height: 32px;     /* smaller than default 38px */
+  padding: 0.4rem 1rem; 
+  min-height: 32px;     
   font-size: 1rem;
   font-weight: 600;
 }
 
-/* Optional: further reduce for mobile */
 @media (max-width: 576px) {
   .accordion-button {
     padding: 0.25rem 0.8rem;
@@ -170,7 +156,6 @@ section::after {
   }
 }
 
-/* Ensure Urdu text inside accordion aligns nicely */
 .accordion-button .hero-urdu {
   font-size: 0.9rem;
   line-height: 1.4;
@@ -181,9 +166,7 @@ section::after {
     font-size: 0.8rem;
   }
 }
-/* ==========================
-   ACCORDION
-========================== */
+
 .urdu-curriculum-list {
   list-style: none;
   padding: 0;
@@ -205,9 +188,7 @@ section::after {
 @media (max-width: 767px) { .urdu-curriculum-list li { font-size: 0.9rem; } .urdu-curriculum-list li i { font-size: 0.9rem; } }
 @media (max-width: 480px) { .urdu-curriculum-list li { font-size: 0.75rem; } .urdu-curriculum-list li i { font-size: 0.75rem; } }
 
-/* ==========================
-   PREMIUM COURSE SECTION
-========================== */
+
 .premium-course-section {
   position: relative;
   background: linear-gradient(to bottom, #f4f9f7, #ffffff);
@@ -224,9 +205,6 @@ section::after {
 }
 .course-overlay { display: none; }
 
-/* ==========================
-   PREMIUM CARD
-========================== */
 .premium-course-card {
   border-radius: 18px;
   padding: 25px;
@@ -237,20 +215,18 @@ section::after {
   border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* RIGHT INFO CARD (WHITE WITH GOLD ACCENTS) */
 .course-info-premium {
-  background: #ffffff; /* white */
+  background: #ffffff; 
   padding: 25px;
   border-radius: 18px;
-  border: 1px solid #d4af37; /* gold border */
-  box-shadow: 0 6px 20px rgba(212,175,55,0.2); /* subtle gold shadow */
+  border: 1px solid #d4af37; 
+  box-shadow: 0 6px 20px rgba(212,175,55,0.2); 
   color: #333;
 }
 
-/* STATUS BADGE PREMIUM */
 .status-badge-premium {
   display: inline-block;
-  background: #e3fbed; /* very soft gold */
+  background: #e3fbed; 
   color:#14532d;
   padding: 5px 14px;
   font-size: 0.85rem;
@@ -259,13 +235,9 @@ section::after {
   margin-bottom: 18px;
 }
 
-/* COURSE META */
 .course-meta { list-style: none; padding: 0; margin-bottom: 20px; }
 .course-meta li { margin-bottom: 8px; font-size: 0.9rem; color: #333; }
 
-/* ==========================
-   RESPONSIVE
-========================== */
 @media (max-width: 992px) {
   .premium-course-card, .course-info-premium { padding: 20px; }
   .course-meta li { font-size: 0.85rem; }
@@ -998,39 +970,7 @@ section::after {
 
     <!-- Back To Top -->
     <button id="backToTop"><i class="bi bi-arrow-up"></i></button>
-    <script>
-      const btn = document.getElementById("backToTop");
-
-      window.onscroll = function () {
-        if (document.documentElement.scrollTop > 200) {
-          btn.style.display = "block";
-        } else {
-          btn.style.display = "none";
-        }
-      };
-
-      btn.onclick = function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      };
-      
-       //drawer
-      const menuToggle = document.getElementById("menuToggle");
-      const mobileDrawer = document.getElementById("mobileDrawer");
-      const closeDrawer = document.getElementById("closeDrawer");
-
-      menuToggle.addEventListener("click", () => {
-        mobileDrawer.classList.add("active");
-      });
-
-      closeDrawer.addEventListener("click", () => {
-        mobileDrawer.classList.remove("active");
-      });
-
-</script>
-
+    <script src="assets/js/s.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
