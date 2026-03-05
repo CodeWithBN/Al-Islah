@@ -1181,6 +1181,10 @@ h3 {
 .footer-bottom {
   color: #cccccccb;
 }
+.developer-credit strong{
+  color:#d4af37;
+  font-weight:500;
+}
 
 .mosque {
   position: absolute;
