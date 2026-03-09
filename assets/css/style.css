@@ -953,12 +953,19 @@ h3 {
   justify-content: center;
 }
 
-.cta-bg {
+.cta-bg, .cta-bgg {
   position: absolute;
   inset: 0;
   background: url("../images/quran.jpg") center center/cover no-repeat;
   opacity: 0.09;
   z-index: 1;
+}
+.cta-bgg
+{
+    background: url("../images/c.jpg") center center/cover no-repeat;
+      opacity: 0.09;
+
+
 }
 
 /* Container content */
