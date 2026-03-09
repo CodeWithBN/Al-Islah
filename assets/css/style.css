@@ -8,7 +8,6 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 
-/* Navbar */
 
 @media (max-width: 768px) {
   .navbar-logo {
@@ -21,13 +20,11 @@ h3 {
     height: 60px;
   }
 }
-/* Default navbar */
 .custom-navbar {
   background: #ffffff;
-  padding: 6px 0; /* reduce vertical space */
+  padding: 6px 0; 
 }
 
-/* Remove Bootstrap extra padding */
 .navbar {
   padding-top: 2px !important;
   padding-bottom: 2px !important;
@@ -39,7 +36,6 @@ h3 {
   overflow: hidden;
 }
 
-/* subtle pattern */
 .custom-navbar::before {
   content: "";
   position: absolute;
@@ -48,30 +44,27 @@ h3 {
   opacity: 0.1;
 }
 .custom-navbar {
-  background: #ffffff; /* clean white */
+  background: #ffffff; 
   font-family: "Roboto", sans-serif;
   padding: 10px 0;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06); /* soft premium shadow */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 
-/* Navbar Logo */
 .navbar-logo {
   height: 70px;
   width: auto;
   object-fit: contain;
 }
 
-/* Navbar Links */
 .nav-link {
-  color: #333 !important; /* dark grey */
+  color: #333 !important; 
   font-weight: 500;
   margin-left: 18px;
   transition: 0.3s ease;
   position: relative;
 }
 
-/* Purple Hover Effect */
 .nav-link:hover {
   color: #ffd700 !important;
 }
@@ -99,7 +92,7 @@ h3 {
   height: 55vh;
   transition: 0.4s ease;
   z-index: 9999;
-  background: #033d2b; /* white drawer */
+  background: #033d2b;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   box-shadow: -15px 0 40px rgba(0, 0, 0, 0.15);
@@ -107,14 +100,13 @@ h3 {
 }
 
 .navbar-toggler-icon {
-  background-image: none; /* remove default icon */
+  background-image: none;
   width: 24px;
   height: 2px;
   background-color: #033d2b;
   position: relative;
 }
 
-/* Create top & bottom lines */
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   content: "";
@@ -134,7 +126,6 @@ h3 {
   top: 7px;
 }
 
-/* Drawer Links */
 .mobile-drawer .nav-link {
   color: #333 !important;
   display: block;
@@ -143,7 +134,6 @@ h3 {
   font-weight: 500;
 }
 
-/* Drawer Hover */
 .mobile-drawer .nav-link:hover {
   color: #5e2b97 !important;
 }
@@ -171,7 +161,6 @@ h3 {
   position: relative;
   text-align: center;
 }
-/* Drawer Header */
 .drawer-header {
   margin-bottom: 30px;
 }
@@ -256,7 +245,6 @@ h3 {
   margin: 0;
 }
 
-/* Close Button */
 .close-btn {
   position: absolute;
   top: -19px;
@@ -271,7 +259,6 @@ h3 {
   color: #ffd700;
 }
 
-/* Hide drawer on desktop */
 @media (min-width: 992px) {
   .mobile-drawer {
     display: none;
@@ -963,12 +950,8 @@ h3 {
 .cta-bgg
 {
     background: url("../images/c.jpg") center center/cover no-repeat;
-      opacity: 0.09;
-
-
 }
 
-/* Container content */
 .cta-section .container {
   position: relative;
   z-index: 2;
@@ -1026,7 +1009,6 @@ h3 {
   color: #ffd700;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .cta-title {
     font-size: 28px;
@@ -1070,7 +1052,6 @@ h3 {
   width: 100%;
 }
 
-/* glass cards */
 .footer-card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
@@ -1086,7 +1067,6 @@ h3 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* logo */
 .footer-logo {
   color: #ffd700;
   font-weight: 500;
@@ -1100,7 +1080,7 @@ h3 {
 .footer-content {
   position: relative;
   z-index: 2;
-  padding-bottom: 120px; /* space before mosque */
+  padding-bottom: 120px; 
 }
 .footer-paragraph {
   color: #e0dfdf;
@@ -1212,7 +1192,6 @@ h3 {
   }
 }
 
-/* back to top */
 #backToTop {
   position: fixed;
   right: 20px;
